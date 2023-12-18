@@ -12,12 +12,20 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/supabase": "^1.1.4",
+    "@nuxtjs/tailwindcss": "^6.10.1",
     "nuxt": "^3.8.2",
+    "shadcn-nuxt": "^0.1.0",
     "vue": "^3.3.12",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@nuxt/ui": "^2.11.1",
-    "prisma": "^5.7.0"
+    "@radix-icons/vue": "^1.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "prisma": "^5.7.0",
+    "radix-vue": "^1.2.5",
+    "tailwind-merge": "^2.1.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
