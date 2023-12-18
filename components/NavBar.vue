@@ -6,7 +6,7 @@
           <!-- logo -->
           <div>
             <a
-              href="#"
+              href="/products"
               class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900"
             >
               <span class="font-bold">Pear</span>
@@ -67,9 +67,12 @@
 </template>
 
 <script setup lang="ts">
-const supabase = useSupabaseClient();
+import PhoneCard from "./phoneCard.vue";
+
+const client = useSupabaseClient();
+
 const handleSignOut = async () => {
-  await supabase.auth.signOut();
+  await client.auth.signOut();
   navigateTo("/login");
 };
 const isOpen = ref(false);
