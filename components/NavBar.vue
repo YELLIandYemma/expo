@@ -62,13 +62,15 @@
         >New releases</a
       >
       <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+      <button
+        @click="handleSignOut"
+        class="py-2 px-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
+      ></button>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
-import PhoneCard from "./phoneCard.vue";
-
 const client = useSupabaseClient();
 
 const handleSignOut = async () => {
