@@ -52,7 +52,7 @@ const getPhones = async () => {
 const handleSubmit = async () => {
   const { data } = await supabase
     .from("orders")
-    .insert({ item: value.value, address: value.value });
+    .insert({ id: true, item: value.value, address: value.value });
 };
 
 onMounted(() => {
