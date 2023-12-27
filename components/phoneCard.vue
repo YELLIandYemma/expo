@@ -99,9 +99,7 @@ const grape_phone_1 = async () => {
     await client
       .from("orders")
       .insert({ item: "Grape Phone 1", address: value.value, quantitiy:quant_1.value });
-    if (value == null) {
-      alert("enter address");
-    }
+      alert('your order wass succeful you will pay on delivery')
   } catch (err) {
     alert(err);
   }
@@ -116,7 +114,7 @@ const grape_phone_2 = async () => {
     await client
       .from("orders")
       .insert({ item: "Grape Phone Vip", address: value_1.value,quantitiy:quant_2.value  });
-
+    alert('your order wass succeful you will pay on delivery')
 
 
   } catch (err) {
@@ -134,6 +132,7 @@ const grape_phone_3 = async () => {
     await client
       .from("orders")
       .insert({  item: "G Phone Flip", address: value_2.value,quantitiy:quant_3.value  });
+      alert('your order wass succeful you will pay on delivery')
 
   } catch (err) {
     alert(err);
