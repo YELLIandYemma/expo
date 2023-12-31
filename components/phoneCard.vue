@@ -12,7 +12,7 @@
       >
       <img
         class="w-20 rounded-lg"
-        src="c:\Users\Arun Shreyas\OneDrive\ドキュメント\Screenshot_2023-12-27_122850-removebg-preview(1).png"
+        src="../public/images/Screenshot_2023-12-27_122850-removebg-preview.png"
       />
 
       <template #footer class=" ">
@@ -37,10 +37,7 @@
       >Comes with 64 gigabytes of storage and 4 gigabytes of storage<br />Running
       Bunddle strap OS 1.0</span
     >
-    <img
-      class="w-20 rounded-lg"
-      src="C:\Users\Arun Shreyas\Downloads\vip.png"
-    />
+    <img class="w-20 rounded-lg" src="../public/images/vip.png" />
 
     <template #footer>
       <UButton label="Buy Now" @click="grape_phone_2" class="mb-3" />
@@ -64,7 +61,7 @@
     >
     <img
       class="w-20 rounded-lg"
-      src="C:\Users\Arun Shreyas\Downloads\Screenshot_2023-12-31_102140-removebg-preview.png"
+      src="../public/images/Screenshot_2023-12-31_102140-removebg-preview.png"
     />
 
     <template #footer>
