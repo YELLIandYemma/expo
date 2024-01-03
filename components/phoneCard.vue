@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--G phone 1-->
-    <UCard class="w-[30rem]">
+    <UCard class="lg:w-[30rem] mb-[2rem]">
       <template #header>
         <h1>Grape phone 1</h1>
       </template>
@@ -28,7 +28,7 @@
       </template>
     </UCard>
   </div>
-  <UCard class="w-[30rem]">
+  <UCard class="w-[30rem] mb-[2rem]">
     <template #header>
       <h1>Grape Phone Vip</h1>
     </template>
@@ -61,7 +61,7 @@
     >
     <img
       class="w-20 rounded-lg"
-      src="../public/images/Screenshot_2023-12-31_102140-removebg-preview.png"
+      src="public\images\Screenshot_2023-12-31_102140-removebg-preview.png"
     />
 
     <template #footer>
