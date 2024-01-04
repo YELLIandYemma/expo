@@ -1,7 +1,7 @@
-<template>
+<template class="max-w-[25rem]">
   <div>
     <!--G phone 1-->
-    <UCard class="lg:w-[30rem] mb-[2rem]">
+    <UCard class="w-[30rem] mb-[2rem]">
       <template #header>
         <h1>Grape phone 1</h1>
       </template>
@@ -64,7 +64,7 @@
       src="public\images\Screenshot_2023-12-31_102140-removebg-preview.png"
     />
 
-    <template #footer>
+    <template #footer class="">
       <UButton label="Buy Now" @click="grape_phone_3" class="mb-3" />
       <UInput
         class="translate-y-[-0.2rem]"
