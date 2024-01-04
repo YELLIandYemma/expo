@@ -15,7 +15,7 @@
     </p>
     <img
       class="w-25 rotate-6"
-      src="C:\Users\Arun Shreyas\OneDrive\Desktop\expo\public\images\Screenshot_2024-01-01_193943-removebg-preview.png"
+      src="public\images\Screenshot_2024-01-01_193943-removebg-preview.png"
     />
     <template #footer>
       <Placeholder class="h-8" />
