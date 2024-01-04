@@ -10,6 +10,9 @@ const signUp = async () => {
   const { user, error } = await client.auth.signUp({
     email: email.value,
     password: password.value,
+    options: {
+      emailRedirectTo: "expo-seven.vercel.app",
+    },
   });
   console.log("user", user);
   console.log("error", error);
