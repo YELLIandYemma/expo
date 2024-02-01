@@ -15,6 +15,7 @@
           <div class="flex items-center mt-4">
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              @click="g1"
             >
               Buy
             </button>
@@ -22,6 +23,7 @@
               class="ml-4 p-2 border border-gray-300 rounded w-40"
               type="text"
               placeholder="Enter address"
+              v-model="address"
             />
           </div>
         </div>
@@ -43,6 +45,7 @@
           <div class="flex items-center mt-4">
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              @click="g2"
             >
               Buy
             </button>
@@ -50,6 +53,7 @@
               class="ml-4 p-2 border border-gray-300 rounded w-40"
               type="text"
               placeholder="Enter address"
+              v-model="address_"
             />
           </div>
         </div>
@@ -70,6 +74,7 @@
           <div class="flex items-center mt-4">
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              @click="g3"
             >
               Buy
             </button>
@@ -77,6 +82,7 @@
               class="ml-4 p-2 border border-gray-300 rounded w-40"
               type="text"
               placeholder="Enter address"
+              v-model="address__"
             />
           </div>
         </div>
@@ -90,11 +96,10 @@
 /* Add Tailwind CSS classes as needed */
 </style>
 
-<style scoped>
-/* Add Tailwind CSS classes as needed */
-</style>
-
 <script setup>
+const address = ref("");
+const address_ = ref("");
+const address__ = ref("");
 definePageMeta({
   middleware: ["auth"],
 });
@@ -109,5 +114,47 @@ onMounted(() => {
 const supabase = useSupabaseClient();
 const logout = async () => {
   await supabase.auth.signOut();
+};
+
+const g1 = async () => {
+  try {
+    await supabase
+      .from("phones")
+      .insert([{ title: "G phone 1", address: address.value }]);
+    console.log(address.value);
+    alert(
+      "Your order for a G phone 1 was succesful the address is " + address.value
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+const g2 = async () => {
+  try {
+    await supabase
+      .from("phones")
+      .insert([{ title: "G phone VIP", address: address_.value }]);
+    console.log(address_.value);
+    alert(
+      "Your order for a G phone 1 was succesful the adderss is " +
+        address_.value
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+const g3 = async () => {
+  try {
+    await supabase
+      .from("phones")
+      .insert([{ title: "G Fold H", address: address__.value }]);
+    console.log(address_.value);
+    alert(
+      "Your order for a G phone 1 was succesful the adderss is " +
+        address__.value
+    );
+  } catch (error) {
+    console.log(error);
+  }
 };
 </script>
