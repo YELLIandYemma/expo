@@ -108,12 +108,13 @@
             >
           </li>
           <li>
-            <a
+            <button
               href="#"
-              @click="isOpen = false"
+              @click="logout"
               class="my-8 w-full text-center font-semibold cta inline-block bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white"
-              >logout</a
             >
+              logout
+            </button>
           </li>
         </ul>
       </aside>

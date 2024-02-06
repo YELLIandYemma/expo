@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "grape",
+      meta: [],
     },
   },
 });
