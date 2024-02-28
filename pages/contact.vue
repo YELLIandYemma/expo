@@ -84,7 +84,7 @@ export default {
           .insert([
             { name: name.value, email: email.value, message: message.value },
           ]);
-        console.log("Message sent successfully!");
+        alert("Message sent successfully!");
         // Optionally, you can reset the form fields after successful submission
         name.value = "";
         email.value = "";

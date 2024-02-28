@@ -32,6 +32,7 @@
 
           <li><NuxtLink to="/contact" class="">Contact</NuxtLink></li>
           <li><li><NuxtLink to="/about" class="">About</NuxtLink></li></li>
+           <li><li><NuxtLink to="/founders" class="">Founders</NuxtLink></li></li>
           <li>
             <button
               href="#"
@@ -119,6 +120,7 @@
             <button
               href="#"
               class="my-8 w-full text-center font-semibold cta inline-block bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white"
+              @click="logout"
             >
               logout
             </button>
@@ -130,6 +132,11 @@
 </template>
 
 <script>
+import { useSupabaseClient } from '~/composables/supabase';
+const supabase = useSupabaseClient()
+const logout = async() =>{
+ const { error } = await supabase.auth.signOut()
+}
 export default {
   data() {
     return {
