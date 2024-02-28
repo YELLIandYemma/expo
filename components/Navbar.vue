@@ -27,16 +27,18 @@
       <div class="hidden md:block">
         <ul class="flex space-x-8 text-sm font-sans">
           <li>
-            <a href="#" class="active border-b-2 border-blue-500 pb-1">Home</a>
+            <NuxtLink to="/" class="active border-b-2 border-blue-500 pb-1">Home</NuxtLink>
           </li>
 
           <li><NuxtLink to="/contact" class="">Contact</NuxtLink></li>
+          <li><li><NuxtLink to="/about" class="">About</NuxtLink></li></li>
           <li>
-            <a
+            <button
               href="#"
               class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold"
-              >Log out</a
             >
+              Log out
+            </button>
           </li>
         </ul>
       </div>
@@ -107,10 +109,15 @@
               >Contact</a
             >
           </li>
+          
+          <li>
+            <a href="#" @click="isOpen = false" class="my-4 inline-block"
+              >About</a
+            >
+          </li>
           <li>
             <button
               href="#"
-              @click="logout"
               class="my-8 w-full text-center font-semibold cta inline-block bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white"
             >
               logout

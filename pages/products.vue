@@ -1,5 +1,5 @@
 <template>
-  <Navbar />
+  <Navbar @click="logout" />
   <products />
 </template>
 <script setup>
@@ -12,4 +12,7 @@ onMounted(() => {
   });
 });
 const supabase = useSupabaseClient();
+const logout = async () => {
+  await supabase.auth.signOut();
+};
 </script>
